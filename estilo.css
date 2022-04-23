@@ -1,0 +1,135 @@
+/*
+
+    Transformaciones en nuestro texto
+
+    Text-transform: Esta propiedad nos permite hacer 
+    transformaciones ESTETICAS en nuestro texto.
+    Admite los valores:
+        none -> No se aplicara ninguna transformaciones.
+        uppercase -> El texto se pondra en mayusculas
+        lowercase -> El texto se pondra en minusculas. 
+        capitalize -> Transforma la primera letra de cada
+        palabra en Mayuscula
+        
+    Adorno en el texto:
+    Text-decoration: Esta propiedad nos permite controlar
+    la linea que podemos poner en los textos.
+    Admite los valores:
+        none -> Elimimna cualquier linea.
+        underline -> Coloca una linea bajo el texto.
+        overline -> Coloca una linea sobre el texto.
+        line-through -> Coloca una linea tachando el texto.  
+    
+    Text-shadow: Funciona exactamente igual que box-shadow,
+    con la unica diferencia que no existe que no admite el 
+    valor inset ni la expansion de la sombra.
+    Los valores son:
+        offsetX -> Desplazamiento horizontal
+        offsetY -> Desplazamiento vertical
+        blur -> Desenfoque
+        color -> color, por defecto escoje el del texto
+    
+*/
+
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 1rem;
+    background-color: lightcyan;
+  }
+  
+  .caja {
+    margin: 2rem auto;
+  
+    width: 100%;
+    height: auto;
+    max-width: 120rem;
+    min-width: 8rem;
+  
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  
+    text-align: justify;
+    text-justify: inter-word;
+    font-size: 2.5rem;
+  
+    border-radius: 5px;
+    box-shadow: 10px 10px rgb(0 0 0 / 0.5);
+    background-color: hsl(0, 0%, 65%);
+  }
+  
+  .caja .texto {
+       
+    width: auto;    
+    height: auto;
+
+
+    border-radius: 0.2em;
+    border-style: ridge;
+    border-color: rgb(68, 88, 88);
+
+    padding-left: 0.8em;
+    padding-right: 0.8em;
+ 
+
+    margin-left: 5rem;
+    margin-right: 5rem;
+  }
+  
+  .caja header {
+      
+    width: max-content;
+  
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+  
+    padding: 1rem;
+  
+    border-width: 10px;
+    border-style: solid;
+    border-color: hsl(0, 0%, 50%);
+  }
+  
+  #text-transform .upeercase{
+    background-color: hsl(179, 44%, 74%);
+    text-transform: uppercase;  
+  }
+
+  #text-decoration .decoration,
+  #text-decoration .decoration a{
+    background-color: hsl(291, 44%, 74%);
+    text-decoration: none;   /*Le quitamos el efecto de link al <a>*/
+  }
+  #text-decoration .decoration{
+
+    text-decoration: line-through;  
+  }
+
+  #text-shadow .shadow{
+    background-color: hsl(0, 15%, 29%);
+    color: hsl(50, 0%, 80%);
+  }
+
+  #text-shadow .texto1{
+    text-shadow: 3px 3px 0 red;
+  } 
+
+  #text-shadow .texto2{ 
+      /*Para desplzarlo a arriba se usa valores negativos*/
+    text-shadow: 3px -3px 0 rgba(0, 225, 255, 0.479);
+  }
+
+  #text-shadow .texto3{ 
+    /*5px de desenfoque*/
+  text-shadow: 20px 20px 5px rgba(77, 255, 0, 0.479);
+} 
+
+#text-shadow .texto4{ 
+    /*Se puede ir acumulando multiples sombras*/
+  text-shadow: 2px 2px  rgba(77, 255, 0, 0.479), 4px 4px rgba(225, 239, 26, 0.5);
+} 
+  
+  
